@@ -1,5 +1,6 @@
-# Ignore everything in the data dir
+# Ignore everything in the data dir and my_logs dir
 data/
+my_logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
