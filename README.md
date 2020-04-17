@@ -1,2 +1,42 @@
 # ds
 Notes and Code to increase understanding of DS, and to capture code patterns.
+
+- Deep Learning.ipynb notebook
+  - Compares various activation functions (SELU, ELU, Leaky RELU, tanh, logistic)
+  - Describes Batch Normalization and why it is needed as compared to Glorot/He initialization
+  - Describes and gives an example on Transfer Learning
+  - Describes and compares optimizers (Nadam, Adam, RMSProp, Adagrad, Nesterov Accelerated Gradient, momentum optimization, SGD)
+  - Describes different learning rate schedulers (1cycle, performance, piecewise constant, exponential, power)
+  - Describes and compares regularization techiniques (MC Dropout, L1, L2, max norm, early stopping)
+- custom_models_and_training_with_tensorflow.ipynb notebook
+  - Gives examples of Tensorflow operations, variables, type conversions, comparison to numpy
+  - Lists Tensorflow data structures (sparse/ragged/string tensors, tensor arrays, sets, queues)
+  - Customizing models and training algorithms
+    - Saving and loading models that contain custom components
+    - Custom loss functions
+    - Custom Activation functions, Custom Initializers, Custom Regularizers, and Custom Constraints
+    - Custom Metrics
+    - Custom Layers
+    - Custom Models
+    - Losses and Metrics based on model internals
+    - Custom training loops
+  - Computing gradients using AutoDiff
+  - Tensorflow functions and rules for faster processing
+- keras_api.ipynb notebook
+  - Build a classification model, run it on the fashion mnist dataset, plot loss/validation loss/accuracy/validation accuracy
+  - Build a regression model for the california housing dataset
+  - Build a Wide and Deep network using the Keras functional API on the california housing dataset
+  - Use the subclassing API to build a Wide and Deep model
+  - Use callbacks to 
+    - save your model occasionally during training
+    - for early stopping
+  - Build your own callback class
+  - Use TensorBoard for visualization
+  - Notes on Leslie Smith's paper "Disciplined approach to Neural Network Hyper-parameters" which is the paper that describes 1cycle learning rate selection for faster network convergence
+- CIFAR10.ipynb notebook applies various Deep Learning techniques to the CIFAR10 dataset
+- MNIST.ipynb notebook
+  - Create sequential model on MNIST dataset
+  - Added callback for checkpointing model during training
+  - Added function to create model for different LR
+  - Added TensorBoard callback (to visualize training progress)
+  - Added early stopping callback (to stop training if accuracy isn't improving much)
