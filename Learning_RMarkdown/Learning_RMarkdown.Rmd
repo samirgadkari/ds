@@ -1,0 +1,59 @@
+---
+title: "Learning RMarkdown"
+author: "Samir Gadkari"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    number_sections: yes
+params:
+  myCountry: ''
+---
+```{r}
+countryToPlot = params$myCountry
+countryToPlot
+```
+
+```{r, load libraries, echo=FALSE}
+
+# Always load the source in a separate chunk
+source('utilities/load_libraries.R')
+source('utilities/plot_pop_by_country.R')
+
+```
+```{r}
+
+libs = c('ggplot2', 'dplyr')
+load_libraries(libs)
+
+```
+
+# Import Data
+```{r, import data}
+
+gappy = read.table('../../datasets/gapminder-FiveYearData.csv', 
+                   sep=',',
+                   strip.white = T,
+                   header = T
+                   )
+str(gappy)
+
+```
+
+This is data from the gapminder project http://www.gapminder.org
+
+# Basic Stats about data
+## Number of Countries
+It includes population and economic data on `r length(unique(gappy$country))` countries from `r length(unique(gappy$continent))` continents.
+
+The data recorded is for:
+
+* life expectancy
+* population
+* GDP per capita
+```{r}
+plotPopByCountry(gappy, countryToPlot)
+```
+
+
+
