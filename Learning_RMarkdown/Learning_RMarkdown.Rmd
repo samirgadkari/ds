@@ -19,6 +19,7 @@ countryToPlot
 # Always load the source in a separate chunk
 source('utilities/load_libraries.R')
 source('utilities/plot_pop_by_country.R')
+source('utilities/environ.R')
 
 ```
 ```{r}
@@ -30,8 +31,8 @@ load_libraries(libs)
 
 # Import Data
 ```{r, import data}
-
-gappy = read.table('../../datasets/gapminder-FiveYearData.csv', 
+dataset_location = paste(environ_datasets(), 'gapminder-FiveYearData.csv', sep='/')
+gappy = read.table(dataset_location, 
                    sep=',',
                    strip.white = T,
                    header = T
