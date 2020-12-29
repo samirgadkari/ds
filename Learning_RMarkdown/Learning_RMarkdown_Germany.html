@@ -404,7 +404,8 @@ load_libraries(libs)</code></pre>
 ## [1] TRUE</code></pre>
 <div id="import-data" class="section level1" number="1">
 <h1 number="1"><span class="header-section-number">1</span> Import Data</h1>
-<pre class="r"><code>gappy = read.table(&#39;../../datasets/gapminder-FiveYearData.csv&#39;, 
+<pre class="r"><code>dataset_location = paste(environ_datasets(), &#39;gapminder-FiveYearData.csv&#39;, sep=&#39;/&#39;)
+gappy = read.table(dataset_location, 
                    sep=&#39;,&#39;,
                    strip.white = T,
                    header = T

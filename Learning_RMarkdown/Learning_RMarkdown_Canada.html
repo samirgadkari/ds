@@ -397,16 +397,6 @@ countryToPlot</code></pre>
 <pre><code>## [1] &quot;Canada&quot;</code></pre>
 <pre class="r"><code>libs = c(&#39;ggplot2&#39;, &#39;dplyr&#39;)
 load_libraries(libs)</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
-<pre><code>## Loading required package: dplyr</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
 <pre><code>## [[1]]
 ## [1] TRUE
 ## 
@@ -414,7 +404,8 @@ load_libraries(libs)</code></pre>
 ## [1] TRUE</code></pre>
 <div id="import-data" class="section level1" number="1">
 <h1 number="1"><span class="header-section-number">1</span> Import Data</h1>
-<pre class="r"><code>gappy = read.table(&#39;../../datasets/gapminder-FiveYearData.csv&#39;, 
+<pre class="r"><code>dataset_location = paste(environ_datasets(), &#39;gapminder-FiveYearData.csv&#39;, sep=&#39;/&#39;)
+gappy = read.table(dataset_location, 
                    sep=&#39;,&#39;,
                    strip.white = T,
                    header = T
